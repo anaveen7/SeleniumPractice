@@ -42,7 +42,7 @@ public class HomePage extends Base{
 	@DataProvider
 	public Object getData() {
 		Object[][] data = new Object[1][2];
-		data[0][0]="Naveen";
+		data[0][0]="ANaveen";
 		data[0][1]="naveen.selenium@mailinator.com";
 		return data;
 	}
