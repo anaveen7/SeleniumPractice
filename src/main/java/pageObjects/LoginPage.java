@@ -13,7 +13,7 @@ public class LoginPage {
 	private By name=By.id("name");
 	private By email=By.id("email");
 	private By checkbox=By.id("agreeTerms");	
-	private By submit=By.id("form-submit");	
+	private By submit=By.id("form-submita");	
 //	@FindBy(id="form-submit") public
 //	WebElement  getSubmit;
 

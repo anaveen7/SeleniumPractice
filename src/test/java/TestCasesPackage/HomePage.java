@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
+//import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -22,12 +22,11 @@ public class HomePage extends Base{
 	public void intilizeBrowser() throws IOException {
 		driver=intializeDriver();
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
-		PageFactory.initElements(driver,this);
-		
+		//PageFactory.initElements(driver,this);
+		driver.get(prop.getProperty("url"));
 	}
 	@Test(dataProvider="getData")
 	public void getLoginPage(String name,String mail) {
-		driver.get(prop.getProperty("url"));
 		lp = new LoginPage(driver);
 		lp.getName().sendKeys(name);
 		lp.getEmail().sendKeys(mail);
